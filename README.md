@@ -2,4 +2,5 @@
 kakaomap studying.
 communication with PHP Script in Android=>
   http request with some data parameter.
-  JSON data retreieve with http request.
+  JSON data retrieve from http request and JSON Data Extracting.
+  Apache FTP Library used
