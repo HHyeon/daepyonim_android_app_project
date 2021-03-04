@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+
+    <TextView
+        android:id="@+id/tv_simple_yn_dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:textColor="#ff000000"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <Button
+        android:id="@+id/btn_simpledialog_yes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/simple_yn_dialog_yes"
+        android:backgroundTint="#00FFFFFF"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_marginTop="12dp"
+        android:layout_toStartOf="@+id/btn_simpledialog_no"
+        android:layout_below="@+id/tv_simple_yn_dialog_title"
+        />
+
+    <Button
+        android:id="@+id/btn_simpledialog_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/simple_yn_dialog_no"
+        android:backgroundTint="#00FFFFFF"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_marginTop="12dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/tv_simple_yn_dialog_title"
+        />
+
+</RelativeLayout>

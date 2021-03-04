@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_alignParentTop="true"
+        android:id="@+id/toolbar_searchingactivity"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:navigationIcon="@drawable/ic_arrow_back_white_24dp"
+        app:contentInsetStartWithNavigation="0dp"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/searchedit_hints"
+            android:id="@+id/edit_location_search_input"
+            android:textColorHint="@color/colorTexts"
+            android:textColor="@color/colorTexts"
+            android:maxLines="1"
+            android:autofillHints=""
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <LinearLayout
+        android:id="@+id/searchingactivity_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/toolbar_searchingactivity"
+        >
+
+        <TextView
+            android:id="@+id/tv_total_item_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_gravity="end"
+            />
+
+        <ListView
+            android:id="@+id/listview_location_search"
+            app:layout_constraintTop_toBottomOf="@+id/tv_total_item_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/searchingactivity_progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/searchingactivity_linearlayout"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>

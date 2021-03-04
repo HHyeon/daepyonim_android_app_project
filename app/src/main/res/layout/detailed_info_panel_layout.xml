@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".DetailedInfoPanel">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/actionbar_detailedpanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:elevation="8dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        />
+
+    <ImageView
+        android:layout_below="@+id/actionbar_detailedpanel"
+        android:id="@+id/imageview_detailedpanel"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/colorPrimary"
+        android:contentDescription="@string/app_name"
+        android:layout_marginBottom="8dp"
+        />
+
+    <TextView
+        android:layout_marginStart="4dp"
+        android:layout_below="@+id/imageview_detailedpanel"
+        android:id="@+id/tv_detailedinfo_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <TextView
+        android:layout_marginStart="4dp"
+        android:id="@+id/tv_detailedinfo_map"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_detailedinfo_title"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <TextView
+        android:layout_marginStart="4dp"
+        android:id="@+id/tv_detailedinfo_dt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_below="@+id/tv_detailedinfo_map"
+        android:layout_alignParentStart="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:layout_marginTop="8dp"
+        />
+
+    <TextView
+        android:layout_marginStart="4dp"
+        android:id="@+id/tv_sub_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/geusija"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tv_detailedinfo_dt"
+        android:layout_marginTop="8dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_detailedinfo_who"
+        android:textSize="16sp"
+        android:layout_toEndOf="@+id/tv_sub_title"
+        android:layout_below="@+id/tv_detailedinfo_dt"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="4dp"
+        android:layout_alignParentEnd="true"
+        />
+
+
+    <TextView
+        android:layout_marginStart="4dp"
+        android:visibility="invisible"
+        android:id="@+id/tv_nodata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/recyclerview_detailedinfo"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:text="@string/NoitemsList"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_below="@+id/tv_sub_title"
+        android:id="@+id/recyclerview_detailedinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbars="vertical"
+        >
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>

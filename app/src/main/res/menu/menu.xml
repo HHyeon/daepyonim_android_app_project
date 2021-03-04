@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!--    <item-->
+<!--        android:id="@+id/btnmenu_action1"-->
+<!--        app:showAsAction="always"-->
+<!--        android:title="act"-->
+<!--        />-->
+    <item
+        android:id="@+id/btnmenu_list"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_view_list_white_24dp"
+        android:title="@string/menutitle_listing"
+        />
+
+    <item
+        android:id="@+id/btnmenu_search"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_search_white_24dp"
+        android:title="@string/menutitle_searching"
+        />
+
+</menu>
